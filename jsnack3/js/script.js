@@ -1,17 +1,18 @@
-// Creare un array che contiene 10 oggetti che rappresentano una zucchina, 
-// indicandone per ognuno varietà, peso e lunghezza. 
-// Calcola quanto pesano tutte le zucchine.
-
+// Creare  un array che contiene 10 oggetti che rappresentano una zucchina.
+// Dividi in due array separati le zucchine che misurano meno o più di 15cm.
+// Infine stampa separatamente quanto pesano i due gruppi di zucchine.
+var zucchinePiu = [];
+var zucchineMeno = [];
 var zucchine = [
     {
         varieta: 'Zucchino nero di Milano',
         peso: 250,
-        lunghezza: 30
+        lunghezza: 17
     },
     {
         varieta: 'Zucchino romanesco',
         peso: 287,
-        lunghezza: 30
+        lunghezza: 13
     },
     {
         varieta: 'Zucchino ortolano di Faenza',
@@ -26,7 +27,7 @@ var zucchine = [
     {
         varieta: 'Zucchino siciliano',
         peso: 68,
-        lunghezza: 30
+        lunghezza: 13
     },
     {
         varieta: 'Zucchina striata di Napoli',
@@ -40,8 +41,8 @@ var zucchine = [
     },
     {
         varieta: 'Zucchina rigata pugliese',
-        peso: 166 ,
-        lunghezza: 30
+        peso: 166,
+        lunghezza: 13
     },
     {
         varieta: 'Zucchino tondo di Piacenza',
@@ -51,23 +52,18 @@ var zucchine = [
     {
         varieta: 'Zucchino tondo di Nizza',
         peso: 87,
-        lunghezza: 30
+        lunghezza: 13
     }
 ];
+for (let i = 0; i < zucchine.length; i++) {
 
-for (var i = 0; i < zucchine.length; i++) {
-    var zucchinePeso= zucchine[i].peso ;
-    console.log('peso' + zucchinePeso); 
-};
-for (var j = 0; j < zucchine.length; j++) {
-    var zucchinePesi = zucchine[j].peso;
-};
-while (condition) {
-    
+    if (zucchine.lunghezza < 15) {
+zucchineMeno.push(zucchine[i])
+    }else{
+        zucchinePiu.push(zucchine[i])
+    }
+
+
 }
-    
-    
-    
-        
-
-    
+console.log(zucchinePiu);
+console.log(zucchineMeno);
