@@ -56,14 +56,18 @@ var zucchine = [
     }
 ];
 for (let i = 0; i < zucchine.length; i++) {
-
     if (zucchine.lunghezza < 15) {
-zucchineMeno.push(zucchine[i])
+        zucchineMeno.push(zucchine[i])
     }else{
         zucchinePiu.push(zucchine[i])
-    }
-
-
+    };
 }
 console.log(zucchinePiu);
 console.log(zucchineMeno);
+
+for (let i = 0; i < zucchineMeno.lenght ; i++) {   
+    sommaMinore += zucchineMeno[i].peso
+};
+for (let i = 0; i < zucchinePiu.lenght ; i++) {   
+    sommaMaggiore += zucchinePiu[i].peso
+};
